@@ -1,5 +1,5 @@
 {
-  "name": "@napi-rs/package-template-linux-arm64-musl",
+  "name": "query-process-linux-arm64-musl",
   "version": "1.0.0",
   "os": [
     "linux"
@@ -7,14 +7,11 @@
   "cpu": [
     "arm64"
   ],
-  "libc": [
-    "musl"
-  ],
-  "main": "package-template.linux-arm64-musl.node",
+  "main": "query-process.linux-arm64-musl.node",
   "files": [
-    "package-template.linux-arm64-musl.node"
+    "query-process.linux-arm64-musl.node"
   ],
-  "description": "Template project for writing node package with napi-rs",
+  "description": "Gather information about running processes",
   "keywords": [
     "napi-rs",
     "NAPI",
@@ -31,5 +28,8 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "repository": "git@github.com:napi-rs/package-template.git"
+  "repository": "https://github.com/Zagrios/query-process",
+  "libc": [
+    "musl"
+  ]
 }

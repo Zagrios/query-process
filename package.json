@@ -1,9 +1,9 @@
 {
-  "name": "@napi-rs/package-template",
+  "name": "query-process",
   "version": "1.0.0",
-  "description": "Template project for writing node package with napi-rs",
+  "description": "Gather information about running processes",
   "main": "index.js",
-  "repository": "git@github.com:napi-rs/package-template.git",
+  "repository": "https://github.com/Zagrios/query-process",
   "license": "MIT",
   "keywords": [
     "napi-rs",
@@ -18,7 +18,7 @@
     "index.js"
   ],
   "napi": {
-    "name": "package-template",
+    "name": "query-process",
     "triples": {
       "defaults": true,
       "additional": [
@@ -57,13 +57,13 @@
     "version": "napi version"
   },
   "devDependencies": {
-    "@napi-rs/cli": "^2.16.4",
+    "@napi-rs/cli": "^2.17.0",
     "@swc-node/register": "^1.6.8",
-    "@swc/core": "^1.3.95",
+    "@swc/core": "^1.3.102",
     "@taplo/cli": "^0.5.2",
     "@typescript-eslint/eslint-plugin": "^6.9.1",
     "@typescript-eslint/parser": "^6.9.1",
-    "ava": "^6.0.0",
+    "ava": "^6.0.1",
     "benny": "^3.7.1",
     "chalk": "^5.3.0",
     "eslint": "^8.52.0",
@@ -94,8 +94,8 @@
     "extensions": [
       "ts"
     ],
-    "timeout": "2m",
-    "workerThreads": false,
+    "timeout": "3m",
+    "workerThreads": true,
     "environmentVariables": {
       "TS_NODE_PROJECT": "./tsconfig.json"
     }
