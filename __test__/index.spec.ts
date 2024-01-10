@@ -1,8 +1,18 @@
+/// <reference types="node" />
+
 import test from 'ava'
 
-import { plus100 } from '../index'
+import { isElevated } from '../index'
 
-test('sync function from native code', (t) => {
-  const fixture = 42
-  t.is(plus100(fixture), fixture + 100)
+// elevated process
+
+test("return false for a non elevated process", (t) => {
+    const nonElevatedPID = process.pid
+    const result = isElevated(nonElevatedPID)
+    t.false(result)
 })
+
+test("throw on invalid pid", t => {
+    const invalidPID = -1
+    t.throws(() => isElevated(invalidPID))
+});
