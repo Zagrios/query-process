@@ -52,7 +52,7 @@ pub fn is_elevated(pid: u32) -> Result<bool, Error> {
 
         match process.uid() {
             Ok(uid) => Ok(Uid::is_root(Uid::from_raw(uid))),
-            Err(e) => Err(Error::from(e))
+            Err(e) => Err(Error::from_reason("Unable to get process uid"))
         }
     }
 
