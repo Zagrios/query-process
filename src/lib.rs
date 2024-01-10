@@ -48,7 +48,7 @@ pub fn is_elevated(pid: u32) -> Result<bool, Error> {
 
     #[cfg(any(target_os = "linux", target_os = "macos"))]
     {
-        let process = Process::new(pid as i32)?;
+        let process = Process::new(pid as i32).map_err(|_| Error::from_reason("Unable to build process from pid"))?;
 
         match process.uid() {
             Ok(uid) => Ok(Uid::is_root(Uid::from_raw(uid))),
