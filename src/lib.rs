@@ -3,7 +3,6 @@ use napi::Error;
 use Result::Err;
 use std::ffi::c_void;
 use std::mem::size_of;
-use nix::libc::getuid;
 
 #[cfg(target_os = "windows")]
 use windows::Win32::{
@@ -14,6 +13,8 @@ use windows::Win32::{
 
 #[cfg(any(target_os = "linux", target_os = "macos"))]
 use nix::unistd::{Pid, Uid};
+#[cfg(any(target_os = "linux", target_os = "macos"))]
+use nix::libc::getuid;
 #[cfg(any(target_os = "linux", target_os = "macos"))]
 use procfs::process::Process;
 
@@ -50,12 +51,8 @@ pub fn is_elevated(pid: u32) -> Result<bool, Error> {
         let process = Process::new(pid as i32)?;
 
         match process.uid() {
-            Ok(uid) => {
-                Uid::is_root(Uid::from_raw(uid))
-            },
-            Err(e) => {
-                Err(Error::from(e))
-            }
+            Ok(uid) => Ok(Uid::is_root(Uid::from_raw(uid))),
+            Err(e) => Err(Error::from(e))
         }
     }
 
