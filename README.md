@@ -1,4 +1,5 @@
 # Query-Process
+<a href="https://github.com/Zagrios/query-process/actions"><img alt="GitHub CI Status" src="https://github.com/Zagrios/query-process/workflows/CI/badge.svg"></a>
 
  `query-process` is a native Node.js npm library built with NAPI-RS, designed for querying information about external processes. Its initial capability includes checking if a process is running with elevated privileges, with plans for additional features in future updates.
 
