@@ -1,6 +1,6 @@
 {
   "name": "query-process-linux-arm-gnueabihf",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "os": [
     "linux"
   ],
