@@ -7,9 +7,8 @@ import { isElevated } from '../index'
 // elevated process
 
 test("return false for a non elevated process", (t) => {
-    const nonElevatedPID = process.pid
-    const result = isElevated(nonElevatedPID)
-    t.is(typeof result, "boolean")
+    const result = isElevated(process.pid);
+    t.is(typeof result, "boolean");
 })
 
 test("throw on invalid pid", t => {
