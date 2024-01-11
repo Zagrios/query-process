@@ -6,7 +6,7 @@ import { isElevated } from '../index'
 
 // elevated process
 
-test("return false for a non elevated process", (t) => {
+test("return a boolean", (t) => {
     const result = isElevated(process.pid);
     t.is(typeof result, "boolean");
 })
