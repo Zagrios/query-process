@@ -4,10 +4,6 @@
   "main": "index.js",
   "types": "index.d.ts",
   "description": "Gather information about running processes",
-  "author": { 
-    "name": "Zagrios",
-    "url": "https://github.com/Zagrios"
-  },
   "keywords": [
     "query-process",
     "process",
