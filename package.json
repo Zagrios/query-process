@@ -8,13 +8,6 @@
     "name": "Zagrios",
     "url": "https://github.com/Zagrios"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Zagrios/query-process.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Zagrios/query-process/issues"
-  },
   "keywords": [
     "query-process",
     "process",
