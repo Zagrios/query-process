@@ -19,9 +19,8 @@
     "query-process",
     "process",
     "processes",
+    "is-elevated",
     "query",
-    "windows",
-    "linux",
     "napi-rs",
     "rust"
   ],
