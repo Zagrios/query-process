@@ -1,14 +1,14 @@
 {
   "name": "query-process",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "types": "index.d.ts",
   "description": "Gather information about running processes",
-  "author": { 
+  "author": {
     "name": "Zagrios",
     "url": "https://github.com/Zagrios"
   },
-  "repository": { 
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/Zagrios/query-process.git"
   },
