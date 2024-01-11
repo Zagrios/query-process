@@ -1,8 +1,6 @@
 use napi_derive::napi;
 use napi::Error;
 use Result::Err;
-use std::ffi::c_void;
-use std::mem::size_of;
 
 #[cfg(target_os = "windows")]
 use windows::Win32::{
@@ -10,6 +8,11 @@ use windows::Win32::{
     System::Threading::{OpenProcess, OpenProcessToken, PROCESS_QUERY_LIMITED_INFORMATION},
     Security::{GetTokenInformation, TokenElevation, TOKEN_ELEVATION, TOKEN_QUERY}
 };
+
+#[cfg(target_os = "windows")]
+use std::mem::size_of;
+#[cfg(target_os = "windows")]
+use std::ffi::c_void;
 
 #[cfg(any(target_os = "linux", target_os = "macos"))]
 use nix::unistd::{Pid, Uid};
