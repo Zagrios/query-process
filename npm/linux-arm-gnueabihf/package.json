@@ -1,6 +1,6 @@
 {
   "name": "query-process-linux-arm-gnueabihf",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "os": [
     "linux"
   ],
@@ -11,22 +11,8 @@
   "files": [
     "query-process.linux-arm-gnueabihf.node"
   ],
-  "description": "Gather information about running processes",
-  "keywords": [
-    "napi-rs",
-    "NAPI",
-    "N-API",
-    "Rust",
-    "node-addon",
-    "node-addon-api"
-  ],
   "license": "MIT",
   "engines": {
     "node": ">= 10"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
-  "repository": "https://github.com/Zagrios/query-process"
+  }
 }
