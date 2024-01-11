@@ -46,7 +46,7 @@ pub fn is_elevated(pid: u32) -> Result<bool, Error> {
 
     }
 
-    #[cfg(any(target_os = "linux", target_os = "macos"))]
+    #[cfg(any(target_os = "linux"))]
     {
         let process = Process::new(pid as i32).map_err(|_| Error::from_reason("Unable to build process from pid"))?;
 
@@ -56,7 +56,7 @@ pub fn is_elevated(pid: u32) -> Result<bool, Error> {
         }
     }
 
-    #[cfg(not(any(target_os = "windows", target_os = "linux", target_os = "macos")))]
+    #[cfg(not(any(target_os = "windows", target_os = "linux")))]
     {
         return Err(Error::from_reason("Unsupported OS"));
     }
