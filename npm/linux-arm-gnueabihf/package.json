@@ -14,5 +14,20 @@
   "license": "MIT",
   "engines": {
     "node": ">= 10"
+  },
+  "description": "Gather information about running processes",
+  "repository": "https://github.com/Zagrios/query-process",
+  "keywords": [
+    "query-process",
+    "process",
+    "processes",
+    "is-elevated",
+    "query",
+    "napi-rs",
+    "rust"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   }
 }

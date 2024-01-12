@@ -4,6 +4,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "description": "Gather information about running processes",
+  "repository": "https://github.com/Zagrios/query-process",
   "keywords": [
     "query-process",
     "process",
@@ -13,6 +14,10 @@
     "napi-rs",
     "rust"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "napi": {
     "name": "query-process",
     "triples": {
