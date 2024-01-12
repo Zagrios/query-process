@@ -36,7 +36,7 @@ More features are planned for future releases.
 import { isElevated } from 'query-process';
 
 try {
-  const elevated = isElevated();
+  const elevated = isElevated(123);
   console.log(elevated);
 } catch (err) {
   console.error(err);
